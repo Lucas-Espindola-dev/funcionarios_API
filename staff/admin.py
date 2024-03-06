@@ -18,7 +18,7 @@ admin.site.register(Cargos, CargosAdmin)
 
 
 class EstadosAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome')
+    list_display = ('id', 'name', 'sigla')
 
 
 admin.site.register(Estados, EstadosAdmin)
