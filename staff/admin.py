@@ -1,9 +1,9 @@
 from django.contrib import admin
-from staff.models import Funcionarios, Cargos, Estados
+from staff.models import Funcionarios, Cargos, Estados, Linguagens
 
 
 class FuncionariosAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'cargo', 'idade', 'salario')
+    list_display = ('id', 'nome', 'idade', 'salario')
     search_fields = ('nome', 'cargo',)
 
 
@@ -22,3 +22,10 @@ class EstadosAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Estados, EstadosAdmin)
+
+
+class LinguagensAdmin(admin.ModelAdmin):
+    list_display = ('id', 'nome')
+
+
+admin.site.register(Linguagens, LinguagensAdmin)
