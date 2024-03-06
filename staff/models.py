@@ -6,6 +6,12 @@ class Cargos(models.Model):
     nome = models.CharField(max_length=200)
 
 
+class Estados(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=200)
+    sigla = models.CharField(max_length=2)
+
+
 class Funcionarios(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=200)
