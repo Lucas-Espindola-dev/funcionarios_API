@@ -1,3 +1,7 @@
 from django.contrib import admin
+from staff.models import Funcionarios, Cargos, Estados
 
-# Register your models here.
+
+class FuncionariosAdmin(admin.ModelAdmin):
+    list_display = ('id', 'nome', 'cargo', 'email', 'estado',)
+    search_fields = ('nome', 'cargo',)
