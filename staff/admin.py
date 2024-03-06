@@ -15,3 +15,10 @@ class CargosAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Cargos, CargosAdmin)
+
+
+class EstadosAdmin(admin.ModelAdmin):
+    list_display = ('id', 'nome')
+
+
+admin.site.register(Estados, EstadosAdmin)
