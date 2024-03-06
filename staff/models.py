@@ -23,8 +23,10 @@ class Funcionarios(models.Model):
     idade = models.IntegerField()
     email = models.CharField(max_length=250)
     celular = models.CharField(max_length=15)
-    estado = models.CharField(max_length=30)
-    cargo = models.ForeignKey(Cargos, on_delete=models.CASCADE)
+    estado = models.ForeignKey(Estados, on_delete=models.PROTECT)
+    cargo = models.ManyToManyField(Cargos)
     salario = models.FloatField()
+    linguagem = models.ManyToManyField(Linguagens, limit_choices_to=5)
+
 
 
