@@ -3,7 +3,7 @@ from staff.models import Funcionarios, Cargos, Estados
 
 
 class FuncionariosAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'cargo', 'idade', 'email', 'estado', 'salario', 'celular')
+    list_display = ('id', 'nome', 'cargo', 'idade', 'salario')
     search_fields = ('nome', 'cargo',)
 
 
