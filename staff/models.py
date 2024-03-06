@@ -15,11 +15,11 @@ class Estados(models.Model):
 class Funcionarios(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=200)
-    idade = models.IntegerField
-    email = models.EmailField
+    idade = models.IntegerField()
+    email = models.CharField(max_length=250)
     celular = models.CharField(max_length=15)
     estado = models.CharField(max_length=30)
     cargo = models.ForeignKey(Cargos, on_delete=models.CASCADE)
-    salario = models.FloatField
+    salario = models.FloatField()
 
 
