@@ -12,6 +12,11 @@ class Estados(models.Model):
     sigla = models.CharField(max_length=2)
 
 
+class Linguagens(models.Model):
+    id = models.AutoField(primary_key=True)
+    nome = models.CharField(max_length=200)
+
+
 class Funcionarios(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=200)
