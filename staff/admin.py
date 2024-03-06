@@ -8,3 +8,10 @@ class FuncionariosAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Funcionarios, FuncionariosAdmin)
+
+
+class CargosAdmin(admin.ModelAdmin):
+    list_display = ('id', 'nome')
+
+
+admin.site.register(Cargos, CargosAdmin)
