@@ -12,3 +12,9 @@ class LingugensSerializer(serializers.ModelSerializer):
     class Meta:
         model = Linguagens
         fields = '__all__'
+
+
+class CargosSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cargos
+        fields = '__all__'
