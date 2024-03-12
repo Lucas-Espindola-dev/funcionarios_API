@@ -14,5 +14,5 @@ class CargosViewset(viewsets.ModelViewSet):
 
 
 class LinguagensViewSet(viewsets.ModelViewSet):
-    queryset = Linguagens
+    queryset = Linguagens.objects.all()
     serializer_class = LingugensSerializer
