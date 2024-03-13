@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from staff.views import FuncionariosViewSet, CargosViewset, LinguagensViewSet
+from staff.views import FuncionariosViewSet, CargosViewset, LinguagensViewSet, FuncionariosStats
 
 router = routers.DefaultRouter()
 router.register('funcionarios', FuncionariosViewSet, basename='funcionarios')
@@ -10,5 +10,6 @@ router.register('linguagens', LinguagensViewSet, basename='linguagens')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('funcionarios/stats/', FuncionariosStats.as_view(), basename='funcionarios-stats')
 ]
