@@ -28,9 +28,7 @@ class FuncionariosStats(views.APIView):
         funcionarios_por_linguagem = self.queryset.values('linguagem__nome').annotate(count=Count('id'))
 
         return response.Response(
-            data={'total_funcionarios': total_funcionarios,
-                  'funcionarios_por_cargo': funcionarios_por_cargo,
-                  'funcionarios_por_linguagem': funcionarios_por_linguagem,
-                  },
-            status=status.HTTP_200_OK
-        )
+            data={'Número de Funcionários': total_funcionarios,
+                  'funcionarios por cargo': funcionarios_por_cargo,
+                  'funcionarios por linguagem': funcionarios_por_linguagem,
+                  })
