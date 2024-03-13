@@ -11,5 +11,5 @@ router.register('linguagens', LinguagensViewSet, basename='linguagens')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('dados', FuncionariosStats.as_view(), name='funcionarios-stats')
+    path('dados/', FuncionariosStats.as_view(), name='funcionarios-stats')
 ]
