@@ -1,6 +1,6 @@
 from staff.models import Funcionarios, Cargos, Linguagens
 from staff.serializers import FuncionariosSerializer, CargosSerializer, LingugensSerializer
-from rest_framework import viewsets
+from rest_framework import viewsets, views
 
 
 class FuncionariosViewSet(viewsets.ModelViewSet):
@@ -16,3 +16,7 @@ class CargosViewset(viewsets.ModelViewSet):
 class LinguagensViewSet(viewsets.ModelViewSet):
     queryset = Linguagens.objects.all()
     serializer_class = LingugensSerializer
+
+
+class FuncionariosStats(views.APIView):
+    ...
