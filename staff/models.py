@@ -26,6 +26,14 @@ class Linguagens(models.Model):
         return self.nome
 
 
+class Senioridade(models.Model):
+    id = models.AutoField(primary_key=True)
+    nome = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.nome
+
+
 class Funcionarios(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=200)
