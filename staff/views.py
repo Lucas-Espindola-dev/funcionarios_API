@@ -1,6 +1,6 @@
 from django.db.models import Avg, Count
-from staff.models import Funcionarios, Cargos, Linguagens
-from staff.serializers import FuncionariosSerializer, CargosSerializer, LingugensSerializer
+from staff.models import Funcionarios, Cargos, Linguagens, Senioridade
+from staff.serializers import FuncionariosSerializer, CargosSerializer, LingugensSerializer, SenioridadeSerializer
 from rest_framework import viewsets, views, response, status
 
 
@@ -12,6 +12,11 @@ class FuncionariosViewSet(viewsets.ModelViewSet):
 class CargosViewset(viewsets.ModelViewSet):
     queryset = Cargos.objects.all()
     serializer_class = CargosSerializer
+
+
+class SenioridadeViewSet(viewsets.ModelViewSet):
+    queryset = Senioridade.objects.all()
+    serializer_class = SenioridadeSerializer
 
 
 class LinguagensViewSet(viewsets.ModelViewSet):
