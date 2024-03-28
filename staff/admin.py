@@ -1,5 +1,5 @@
 from django.contrib import admin
-from staff.models import Funcionarios, Cargos, Estados, Linguagens
+from staff.models import Funcionarios, Cargos, Estados, Linguagens, Senioridade
 
 
 class FuncionariosAdmin(admin.ModelAdmin):
@@ -29,3 +29,10 @@ class LinguagensAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Linguagens, LinguagensAdmin)
+
+
+class SenioridadeAdmin(admin.ModelAdmin):
+    list_display = ('id', 'nome')
+
+
+admin.site.register(Senioridade, SenioridadeAdmin)
