@@ -19,6 +19,7 @@ class CargosSerializer(serializers.ModelSerializer):
         model = Cargos
         fields = '__all__'
 
+
 class SenioridadeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Senioridade
