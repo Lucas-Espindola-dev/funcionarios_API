@@ -39,4 +39,5 @@ class FuncionariosStats(views.APIView):
                   'Funcionários por cargo': funcionarios_por_cargo,
                   'Funcionários por linguagem': funcionarios_por_linguagem,
                   'Media salarial por linguagem': media_salarial,
+                  'Funcionários por Senioridade': funcionarios_por_senioridade
                   })
