@@ -44,6 +44,7 @@ class Funcionarios(models.Model):
     cargo = models.ManyToManyField(Cargos, related_name='cargos')
     salario = models.FloatField()
     linguagem = models.ManyToManyField(Linguagens, related_name='linguagem')
+    senioridade = models.ForeignKey(Senioridade, on_delete=models.PROTECT, related_name='senioridade')
 
 
 
