@@ -26,6 +26,7 @@ class FuncionariosStats(views.APIView):
         total_funcionarios = self.queryset.count()
         funcionarios_por_cargo = self.queryset.values('cargo__nome').annotate(count=Count('id'))
         funcionarios_por_linguagem = self.queryset.values('linguagem__nome').annotate(count=Count('id'))
+        funcionarios_por_senioridade = self.queryset.values('senioridade__nome').annotate(count=Count('id'))
         media_salarial = self.queryset.values('linguagem__nome').annotate(media_sal=Avg('salario'))
 
         return response.Response(
