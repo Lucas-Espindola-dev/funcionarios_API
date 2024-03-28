@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from staff.models import Funcionarios, Linguagens, Cargos
+from staff.models import Funcionarios, Linguagens, Cargos, Senioridade
 
 
 class FuncionariosSerializer(serializers.ModelSerializer):
@@ -17,4 +17,9 @@ class LingugensSerializer(serializers.ModelSerializer):
 class CargosSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cargos
+        fields = '__all__'
+
+class SenioridadeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Senioridade
         fields = '__all__'
