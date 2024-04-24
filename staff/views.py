@@ -1,5 +1,5 @@
 from django.db.models import Avg, Count
-from rest_framework import viewsets, views, response, status
+from rest_framework import viewsets, views, response
 from staff.models import Funcionarios, Cargos, Linguagens, Senioridade
 from staff.serializers import FuncionariosSerializer, CargosSerializer, LingugensSerializer, SenioridadeSerializer
 
