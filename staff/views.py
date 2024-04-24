@@ -1,7 +1,7 @@
 from django.db.models import Avg, Count
+from rest_framework import viewsets, views, response, status
 from staff.models import Funcionarios, Cargos, Linguagens, Senioridade
 from staff.serializers import FuncionariosSerializer, CargosSerializer, LingugensSerializer, SenioridadeSerializer
-from rest_framework import viewsets, views, response, status
 
 
 class FuncionariosViewSet(viewsets.ModelViewSet):
