@@ -1,12 +1,17 @@
 from django.db.models import Avg, Count
 from rest_framework import viewsets, views, response
 from staff.models import Funcionarios, Cargos, Linguagens, Senioridade
-from staff.serializers import FuncionariosSerializer, CargosSerializer, LingugensSerializer, SenioridadeSerializer
+from staff.serializers import FuncionariosModelSerializer, FuncionariosListDetailSerializer, \
+    CargosSerializer, LingugensSerializer, SenioridadeSerializer
 
 
 class FuncionariosViewSet(viewsets.ModelViewSet):
     queryset = Funcionarios.objects.all()
-    serializer_class = FuncionariosSerializer
+
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return FuncionariosListDetailSerializer
+        return FuncionariosModelSerializer
 
 
 class CargosViewset(viewsets.ModelViewSet):
