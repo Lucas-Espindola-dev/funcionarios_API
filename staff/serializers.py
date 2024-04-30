@@ -2,12 +2,6 @@ from rest_framework import serializers
 from staff.models import Funcionarios, Linguagens, Cargos, Senioridade
 
 
-class FuncionariosSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Funcionarios
-        fields = '__all__'
-
-
 class LingugensSerializer(serializers.ModelSerializer):
     class Meta:
         model = Linguagens
@@ -24,3 +18,19 @@ class SenioridadeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Senioridade
         fields = '__all__'
+
+
+class FuncionariosModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Funcionarios
+        fields = '__all__'
+
+
+class FuncionariosListDetailSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Funcionarios
+        fields = '__all__'
+
+
+
