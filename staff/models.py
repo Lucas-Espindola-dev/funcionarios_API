@@ -40,11 +40,11 @@ class Funcionarios(models.Model):
     idade = models.IntegerField()
     email = models.CharField(max_length=250)
     celular = models.CharField(max_length=15)
-    estado = models.ForeignKey(Estados, on_delete=models.PROTECT, related_name='estado')
-    cargo = models.ManyToManyField(Cargos, related_name='cargos')
+    estado = models.ForeignKey(Estados, on_delete=models.PROTECT, related_name='funcionarios')
+    cargo = models.ManyToManyField(Cargos, related_name='funcionarios')
     salario = models.FloatField()
-    linguagem = models.ManyToManyField(Linguagens, related_name='linguagem')
-    senioridade = models.ForeignKey(Senioridade, on_delete=models.PROTECT, related_name='senioridade')
+    linguagem = models.ManyToManyField(Linguagens, related_name='funcionarios')
+    senioridade = models.ForeignKey(Senioridade, on_delete=models.PROTECT, related_name='funcionarios')
 
 
 
