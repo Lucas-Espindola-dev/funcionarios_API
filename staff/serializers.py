@@ -27,6 +27,9 @@ class FuncionariosModelSerializer(serializers.ModelSerializer):
 
 
 class FuncionariosListDetailSerializer(serializers.ModelSerializer):
+    cargo = CargosSerializer()
+    linguagem = LingugensSerializer(many=True)
+    senioridade = SenioridadeSerializer()
 
     class Meta:
         model = Funcionarios
