@@ -33,7 +33,5 @@ class FuncionariosListDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Funcionarios
-        fields = '__all__'
-
-
-
+        fields = ['id', 'nome', 'cargo', 'linguagem', 'senioridade',
+                  'salario', 'idade', 'email', 'celular', 'estado', ]
