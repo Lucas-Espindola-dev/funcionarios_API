@@ -32,7 +32,7 @@ class LinguagensViewSet(viewsets.ModelViewSet):
 class FuncionariosStatsViewSet(viewsets.ViewSet):
     queryset = Funcionarios.objects.all()
 
-    def list(self, request):
+    def list(self, request, format=None):
         total_funcionarios = self.queryset.count()
         funcionarios_por_cargo = self.queryset.values('cargo__nome').annotate(count=Count('id'))
         funcionarios_por_linguagem = self.queryset.values('linguagem__nome').annotate(count=Count('id'))
