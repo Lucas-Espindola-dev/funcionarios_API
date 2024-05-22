@@ -1,11 +1,13 @@
 from django.db.models import Avg, Count
 from rest_framework import viewsets, views, response
+from rest_framework.permissions import IsAuthenticated
 from staff.models import Funcionarios, Cargos, Linguagens, Senioridade
 from staff.serializers import FuncionariosModelSerializer, FuncionariosListDetailSerializer, \
     CargosSerializer, LingugensSerializer, SenioridadeSerializer
 
 
 class FuncionariosViewSet(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
     queryset = Funcionarios.objects.all()
 
     def get_serializer_class(self):
