@@ -17,21 +17,25 @@ class FuncionariosViewSet(viewsets.ModelViewSet):
 
 
 class CargosViewset(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
     queryset = Cargos.objects.all()
     serializer_class = CargosSerializer
 
 
 class SenioridadeViewSet(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
     queryset = Senioridade.objects.all()
     serializer_class = SenioridadeSerializer
 
 
 class LinguagensViewSet(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
     queryset = Linguagens.objects.all()
     serializer_class = LingugensSerializer
 
 
 class FuncionariosStatsViewSet(viewsets.ViewSet):
+    permission_classes = (IsAuthenticated,)
     queryset = Funcionarios.objects.all()
 
     def list(self, request, format=None):
