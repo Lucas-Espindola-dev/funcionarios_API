@@ -13,4 +13,5 @@ router.register('dados', FuncionariosStatsViewSet, basename='funcionarios-stats'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('', include('authentication.urls'))
 ]
