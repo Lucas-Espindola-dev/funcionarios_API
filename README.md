@@ -51,3 +51,27 @@ Uma API robusta desenvolvida para gerenciar informações de funcionários, prop
 1. **Clone o Repositório**
    ```bash
    git clone https://github.com/Lucas-Espindola-dev/funcionarios_API.git
+   
+2. **Instale as dependências**
+   ```bash
+  pip install -r requirements.txt
+
+3. **Configure o Banco de Dados**
+   ```bash
+   python manage.py migrate
+
+4. **Inicie o Servidor**
+   ```bash
+   python manage.py runserver
+
+5. **Acesse a API **
+   ```bash
+   Navegue até http://localhost:8000/api/ para explorar os endpoints da API.
+
+## Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, enviar pull requests ou discutir melhorias.
+
+
+Você pode copiar e colar esse conteúdo no arquivo `README.md` do seu repositório. Se precisar de mais alguma coisa ou quiser fazer ajustes, estou aqui para ajudar!
+
+
