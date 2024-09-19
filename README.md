@@ -54,7 +54,7 @@ Uma API robusta desenvolvida para gerenciar informações de funcionários, prop
    
 2. **Instale as dependências**
    ```bash
-  pip install -r requirements.txt
+   pip install -r requirements.txt
 
 3. **Configure o Banco de Dados**
    ```bash
